@@ -5,13 +5,33 @@ import {
     getProjects
 } from "./logic/projectManager";
 
-import renderProjects from "./ui/renderProjects";
+import {
+    createTodo
+} from "./logic/todoManager";
 
-createProject("Default");
+import renderProjects from "./ui/renderProjects";
+import renderTodos from "./ui/renderTodos";
+
+const defaultProject = createProject("Default");
+
 createProject("Estudos");
 
-const projects = getProjects();
+createTodo(
+    defaultProject,
+    "Estudar Webpack",
+    "Aprender configuração",
+    "12/05/2026",
+    "high"
+);
 
-console.log(projects);
+createTodo(
+    defaultProject,
+    "Fazer exercícios",
+    "Praticar JavaScript",
+    "15/05/2026",
+    "medium"
+);
 
-renderProjects(projects);
+renderProjects(getProjects());
+
+renderTodos(defaultProject);
