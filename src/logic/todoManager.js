@@ -19,6 +19,11 @@ function createTodo(
     return todo;
 }
 
+function removeTodo(project, todoId) {
+    project.removeTodo(todoId);
+}
+
 export {
-    createTodo
+    createTodo,
+    removeTodo
 };

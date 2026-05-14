@@ -12,6 +12,11 @@ export default function renderTodos(project) {
             <h3>${todo.title}</h3>
             <p>${todo.description}</p>
             <small>${todo.dueDate}</small>
+
+            <button class="delete-btn"
+                data-id="${todo.id}">
+                Delete
+            </button>
         `;
 
         container.appendChild(div);
