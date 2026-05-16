@@ -13,6 +13,11 @@ import {
 import renderProjects from "./ui/renderProjects";
 import renderTodos from "./ui/renderTodos";
 
+import {
+    saveProjects,
+    loadProjects
+} from "./storage/storage";
+
 const defaultProject = createProject("Default");
 
 createProject("Estudos");
@@ -36,6 +41,10 @@ createTodo(
 renderProjects(getProjects());
 
 renderTodos(defaultProject);
+
+saveProjects(getProjects());
+
+console.log(loadProjects());
 
 const form = document.getElementById("todo-form");
 
