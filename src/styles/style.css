@@ -68,3 +68,75 @@ button {
     border-radius: 12px;
     margin-bottom: 15px;
 }
+
+.active-project {
+    background-color: #5a5a5a;
+}
+
+#project-form {
+    margin-top: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#project-form input {
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.completed {
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+
+#todo-form {
+    margin-top: 20px;
+
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#todo-form input,
+#todo-form select {
+    padding: 10px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #2f2f2f;
+    color: white;
+}
+
+#todo-form input::placeholder {
+    color: #bdbdbd;
+}
+
+#todo-form button {
+    background-color: #5a5a5a;
+    color: white;
+
+    transition: 0.2s;
+}
+
+#todo-form button:hover {
+    background-color: #707070;
+}
+
+#project-form button,
+.complete-btn,
+.delete-btn {
+    background-color: #5a5a5a;
+    color: white;
+
+    transition: 0.2s;
+}
+
+#project-form button:hover,
+.complete-btn:hover,
+.delete-btn:hover {
+    background-color: #707070;
+}

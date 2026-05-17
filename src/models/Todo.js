@@ -1,16 +1,31 @@
 export default class Todo {
-    constructor(title, description, dueDate, priority){
-        this.id = crypto.randomUUID();
+
+    constructor(
+        title,
+        description,
+        dueDate,
+        priority
+    ) {
+
+        this.id =
+            crypto.randomUUID();
 
         this.title = title;
-        this.description = description;
-        this.dueDate = dueDate;
-        this.priority = priority;
-        
-        this.completed = false;
-    };
 
-    toogleComplete(){
-        this.completed = !this.completed;
-    };
-};
+        this.description =
+            description;
+
+        this.dueDate =
+            dueDate;
+
+        this.priority =
+            priority;
+
+        this.completed = false;
+    }
+
+    toggleComplete() {
+        this.completed =
+            !this.completed;
+    }
+}

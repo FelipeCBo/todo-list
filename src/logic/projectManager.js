@@ -14,7 +14,14 @@ function getProjects() {
     return projects;
 }
 
+function setProjects(newProjects) {
+    projects.length = 0;
+
+    projects.push(...newProjects);
+}
+
 export {
     createProject,
-    getProjects
+    getProjects,
+    setProjects
 };
